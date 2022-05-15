@@ -1,0 +1,13 @@
+tasks:
+    - init: make setup
+      command: make start
+ports:
+    - port: 3000
+      visibility: public
+vscode:
+    extensions:
+        - ms-python.python
+        - ms-azuretools.vscode-docker
+        - hashicorp.terraform
+        - esbenp.prettier-vscode
+        - dbaeumer.vscode-eslint
