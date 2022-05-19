@@ -3,16 +3,29 @@ import Head from 'next/head'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  margin: 20px;
-
-  a {
-    color: #0070f3;
-    font-weight: 500;
-  }
+  max-width: 900px;
+  padding: 20px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Title = styled.h1`
-  font-weight: 800;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0;
+  color: #f5cb73;
+`;
+
+const LinksList = styled.ul`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.1em;
+  padding-left: 1em;
+
+  > li::marker {
+    color: #d4d4d4;
+  }
 `;
 
 const Home: NextPage = () => {
@@ -24,15 +37,18 @@ const Home: NextPage = () => {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
+      <header>
+          <Title>
+            Karl Hobley
+          </Title>
+      </header>
+
       <main>
-        <Title>
-          Karl Hobley (aka. <span title="KArl EDward ROss HObley">kaedroho</span>)
-        </Title>
-        <ul>
+        <LinksList>
           <li><a href="http://github.com/kaedroho">GitHub</a></li>
           <li><a href="https://twitter.com/kaedroho">Twitter</a></li>
           <li><a href="https://instagram.com/kaedroho">Instagram</a></li>
-        </ul>
+        </LinksList>
       </main>
     </Wrapper>
   )
